@@ -1,7 +1,9 @@
-package oakberg.dk.mytemplate;
+package oakberg.dk.mytemplate.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import oakberg.dk.mytemplate.R;
 
 public class MainActivity extends AppCompatActivity {
 
