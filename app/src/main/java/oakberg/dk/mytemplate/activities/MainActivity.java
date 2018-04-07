@@ -49,5 +49,10 @@ public class MainActivity extends AppCompatActivity {
     public void setViewPager(int fragmentNumber){
         viewPager.setCurrentItem(fragmentNumber);
     }
+
+    @Override
+    public void onBackPressed() {
+        viewPager.setCurrentItem(0);
+    }
 }
 //
