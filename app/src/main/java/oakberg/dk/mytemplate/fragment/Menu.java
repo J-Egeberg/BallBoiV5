@@ -3,13 +3,12 @@ package oakberg.dk.mytemplate.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
-import java.util.zip.Inflater;
 
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
@@ -19,6 +18,7 @@ import oakberg.dk.mytemplate.activities.MainActivity;
  */
 
 public class Menu extends Fragment {
+    private static final String TAG = "Menu";
 
     private Button startBtn;
     private Button optionBtn;
@@ -32,45 +32,46 @@ public class Menu extends Fragment {
         View view = inflater.inflate(R.layout.menu_fragment_layout, container, false);
 
         startBtn = (Button) view.findViewById(R.id.startbtn);
-        optionBtn = (Button) view.findViewById(R.id.startbtn);
-        personalBtn = (Button) view.findViewById(R.id.startbtn);
-        globalBtn = (Button) view.findViewById(R.id.startbtn);
-        exitBtn = (Button) view.findViewById(R.id.startbtn);
+        optionBtn = (Button) view.findViewById(R.id.optionbtn);
+        personalBtn = (Button) view.findViewById(R.id.personalbtn);
+        globalBtn = (Button) view.findViewById(R.id.globalbtn);
+        exitBtn = (Button) view.findViewById(R.id.exitbtn);
+        Log.d(TAG, "onCreateView: started.");
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Toast.makeText(getActivity(), "Going to Start", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(0);
+                ((MainActivity)getActivity()).setViewPager(10);
             }
         });
         optionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Options", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(1);
+                ((MainActivity)getActivity()).setViewPager(2);
             }
         });
         personalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Personal Score", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(2);
+                ((MainActivity)getActivity()).setViewPager(3);
             }
         });
         globalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Global Score", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(3);
+                ((MainActivity)getActivity()).setViewPager(4);
             }
         });
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Exit", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(4);
+                ((MainActivity)getActivity()).setViewPager(5);
             }
         });
 
