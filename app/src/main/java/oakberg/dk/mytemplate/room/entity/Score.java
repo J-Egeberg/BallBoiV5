@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.entity;
+package oakberg.dk.mytemplate.room.entity;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
@@ -15,6 +15,7 @@ public class Score {
     private int id;
     @ColumnInfo(name = "time")
     private int time;
+    @ColumnInfo(name = "userName")
     private String userName;
 
     public Score(){
@@ -56,6 +57,7 @@ public class Score {
         return "Score{" +
                 "id=" + id +
                 ", time=" + time +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }
