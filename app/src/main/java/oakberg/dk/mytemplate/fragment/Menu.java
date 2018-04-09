@@ -43,7 +43,7 @@ public class Menu extends Fragment {
             public void onClick(View view) {
 
                 Toast.makeText(getActivity(), "Going to Start", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(10);
+                ((MainActivity)getActivity()).setViewPager(1);
             }
         });
         optionBtn.setOnClickListener(new View.OnClickListener() {

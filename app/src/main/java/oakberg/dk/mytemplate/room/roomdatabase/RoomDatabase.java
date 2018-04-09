@@ -20,22 +20,6 @@ public class RoomDatabase {
             roomDatabase.daoScore().insert(new Score(1, 60, "Cymback"));
             roomDatabase.daoScore().insert(new Score(2, 70, "Eyedfiber"));
 
-            Score score = new Score(3, 50, "Jørgen");
-            roomDatabase.daoScore().insert(score);
-
-            score = roomDatabase.daoScore().findByName("Jørgen");
-            score.setTime(80);
-
-            roomDatabase.daoScore().update(score);
-
-            //roomDatabase.daoUser().delete(u);
-
-            Log.d("users", "Users: " + roomDatabase.daoScore().countUsers());
-
-            Log.d("users", "Users: " + roomDatabase.daoScore().getAll());
-
-            Log.d("users", "User: " + roomDatabase.daoScore().findByName("H"));
-
             roomDatabase.close();
 
         }).start();
