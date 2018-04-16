@@ -42,28 +42,28 @@ public class Menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getActivity(), "Going to Start", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to QuickFood", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(1);
             }
         });
         optionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Options", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to DeliciousFood", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(2);
             }
         });
         personalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Personal Score", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to VegetarianFood Score", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(3);
             }
         });
         globalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Global Score", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to AddFood Score", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(4);
             }
         });
