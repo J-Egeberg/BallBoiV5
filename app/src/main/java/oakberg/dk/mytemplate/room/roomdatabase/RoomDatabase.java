@@ -1,5 +1,5 @@
 package oakberg.dk.mytemplate.room.roomdatabase;
-
+/*
 import android.content.Context;
 
 import oakberg.dk.mytemplate.room.database.RoomDB;
@@ -7,7 +7,7 @@ import oakberg.dk.mytemplate.room.database.RoomDB;
 /**
  * Created by Oakberg on 08/04/2018.
  */
-
+/*
 public class RoomDatabase {
     public RoomDatabase(Context context)
     {
@@ -22,4 +22,4 @@ public class RoomDatabase {
 
         }).start();
     }
-}
+}*/

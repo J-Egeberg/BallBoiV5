@@ -23,7 +23,7 @@ public class MyRecipes extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.menu_fragment_layout, container, false);
+        View view = inflater.inflate(R.layout.myrecipes_fragment_layout, container, false);
 
 
         return view;

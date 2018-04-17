@@ -1,17 +1,18 @@
 package oakberg.dk.mytemplate.room.database;
-
+/*
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
+import oakberg.dk.mytemplate.entity.Recipe;
 import oakberg.dk.mytemplate.room.dao.DaoRecipe;
 
 /**
  * Created by Oakberg on 08/04/2018.
  */
-
-@Database(entities = {Score.class}, version = 1)
+/*
+@Database(entities = {Recipe.class}, version = 1)
 public abstract class RoomDB extends RoomDatabase {
     public abstract DaoRecipe daoScore();
 
@@ -27,4 +28,4 @@ public abstract class RoomDB extends RoomDatabase {
     public static void destroyRoomDBInstance() {
         INSTANCE = null;
     }
-}
+}*/
