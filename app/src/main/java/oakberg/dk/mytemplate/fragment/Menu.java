@@ -20,10 +20,9 @@ import oakberg.dk.mytemplate.activities.MainActivity;
 public class Menu extends Fragment {
     private static final String TAG = "Menu";
 
-    private Button startBtn;
-    private Button optionBtn;
-    private Button personalBtn;
-    private Button globalBtn;
+    private Button myRecipe;
+    private Button allRecipe;
+    private Button addRecipe;
     private Button exitBtn;
 
     @Nullable
@@ -31,47 +30,40 @@ public class Menu extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.menu_fragment_layout, container, false);
 
-        startBtn = (Button) view.findViewById(R.id.startbtn);
-        optionBtn = (Button) view.findViewById(R.id.optionbtn);
-        personalBtn = (Button) view.findViewById(R.id.personalbtn);
-        globalBtn = (Button) view.findViewById(R.id.globalbtn);
+        myRecipe = (Button) view.findViewById(R.id.myrecipesbtn);
+        allRecipe = (Button) view.findViewById(R.id.allrecipesbtn);
+        addRecipe = (Button) view.findViewById(R.id.addrecipebtn);
         exitBtn = (Button) view.findViewById(R.id.exitbtn);
         Log.d(TAG, "onCreateView: started.");
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
+        myRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getActivity(), "Going to QuickFood", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to My Recipes", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(1);
             }
         });
-        optionBtn.setOnClickListener(new View.OnClickListener() {
+        allRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to DeliciousFood", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getActivity(), "Going to All Recipes", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(2);
             }
         });
-        personalBtn.setOnClickListener(new View.OnClickListener() {
+        addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to VegetarianFood Score", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to Add Food", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(3);
-            }
-        });
-        globalBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to AddFood Score", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(4);
             }
         });
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Exit", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(5);
+                Toast.makeText(getActivity(), "Exiting", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).setViewPager(4);
             }
         });
 

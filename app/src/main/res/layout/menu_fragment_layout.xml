@@ -12,28 +12,23 @@
         android:text="Menu Fragment" />
 
     <Button
-        android:id="@+id/startbtn"
+        android:id="@+id/myrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start" />
+        android:text="My Recipes" />
+
 
     <Button
-        android:id="@+id/optionbtn"
+        android:id="@+id/allrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Options" />
+        android:text="All Recipes" />
 
     <Button
-        android:id="@+id/personalbtn"
+        android:id="@+id/addrecipebtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Personal Scores" />
-
-    <Button
-        android:id="@+id/globalbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Global Scores" />
+        android:text="Add Recipe" />
 
     <Button
         android:id="@+id/exitbtn"

@@ -9,9 +9,8 @@ import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.fragment.Exit;
 import oakberg.dk.mytemplate.fragment.AddFood;
 import oakberg.dk.mytemplate.fragment.Menu;
-import oakberg.dk.mytemplate.fragment.DeliciousFood;
-import oakberg.dk.mytemplate.fragment.VegetarianFood;
-import oakberg.dk.mytemplate.fragment.QuickFood;
+import oakberg.dk.mytemplate.fragment.MyRecipes;
+import oakberg.dk.mytemplate.fragment.AllRecipes;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private void setUpViewPager(ViewPager viewPager){
         SectionStatePagerAdapter adapter = new SectionStatePagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Menu(), "Menu");
-        adapter.addFragment(new QuickFood(), "QuickFood");
-        adapter.addFragment(new DeliciousFood(), "DeliciousFood");
-        adapter.addFragment(new VegetarianFood(), "VegetarianFood Score");
-        adapter.addFragment(new AddFood(), "AddFood Score");
+        adapter.addFragment(new MyRecipes(), "My Recipes");
+        adapter.addFragment(new AllRecipes(), "All Recipes");
+        adapter.addFragment(new AddFood(), "Add Food");
         adapter.addFragment(new Exit(), "Exit");
         viewPager.setAdapter(adapter);
     }

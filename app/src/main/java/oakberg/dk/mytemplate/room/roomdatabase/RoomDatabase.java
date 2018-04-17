@@ -1,10 +1,8 @@
 package oakberg.dk.mytemplate.room.roomdatabase;
 
 import android.content.Context;
-import android.util.Log;
 
 import oakberg.dk.mytemplate.room.database.RoomDB;
-import oakberg.dk.mytemplate.room.entity.Score;
 
 /**
  * Created by Oakberg on 08/04/2018.

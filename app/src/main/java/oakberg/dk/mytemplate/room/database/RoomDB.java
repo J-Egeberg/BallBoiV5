@@ -5,8 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import oakberg.dk.mytemplate.room.dao.DaoScore;
-import oakberg.dk.mytemplate.room.entity.Score;
+import oakberg.dk.mytemplate.room.dao.DaoRecipe;
 
 /**
  * Created by Oakberg on 08/04/2018.
@@ -14,7 +13,7 @@ import oakberg.dk.mytemplate.room.entity.Score;
 
 @Database(entities = {Score.class}, version = 1)
 public abstract class RoomDB extends RoomDatabase {
-    public abstract DaoScore daoScore();
+    public abstract DaoRecipe daoScore();
 
     private static RoomDB INSTANCE;
 
