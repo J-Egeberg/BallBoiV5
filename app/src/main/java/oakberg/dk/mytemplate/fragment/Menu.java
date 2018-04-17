@@ -41,7 +41,7 @@ public class Menu extends Fragment {
             public void onClick(View view) {
 
                 Toast.makeText(getActivity(), "Going to My Recipes", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(1);
+                ((MainActivity)getActivity()).setViewPager(2);
             }
         });
         allRecipe.setOnClickListener(new View.OnClickListener() {
@@ -49,21 +49,21 @@ public class Menu extends Fragment {
             public void onClick(View view) {
 
                 Toast.makeText(getActivity(), "Going to All Recipes", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(2);
+                ((MainActivity)getActivity()).setViewPager(3);
             }
         });
         addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Add Food", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(3);
+                ((MainActivity)getActivity()).setViewPager(4);
             }
         });
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Exiting", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(4);
+                ((MainActivity)getActivity()).setViewPager(0);
             }
         });
 

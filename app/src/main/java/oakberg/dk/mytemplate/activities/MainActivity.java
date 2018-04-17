@@ -8,6 +8,7 @@ import android.util.Log;
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.fragment.Exit;
 import oakberg.dk.mytemplate.fragment.AddFood;
+import oakberg.dk.mytemplate.fragment.Login;
 import oakberg.dk.mytemplate.fragment.Menu;
 import oakberg.dk.mytemplate.fragment.MyRecipes;
 import oakberg.dk.mytemplate.fragment.AllRecipes;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpViewPager(ViewPager viewPager){
         SectionStatePagerAdapter adapter = new SectionStatePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Login(), "Login");
         adapter.addFragment(new Menu(), "Menu");
         adapter.addFragment(new MyRecipes(), "My Recipes");
         adapter.addFragment(new AllRecipes(), "All Recipes");
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        viewPager.setCurrentItem(0);
+        viewPager.setCurrentItem(1);
     }
 }
 //
