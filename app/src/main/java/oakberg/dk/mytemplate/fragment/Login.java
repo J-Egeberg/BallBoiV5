@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
 
@@ -20,6 +22,8 @@ public class Login extends Fragment {
 
     private Button loginButton;
     private Button registerButton;
+    private Text userName;
+    private Text password;
 
     @Nullable
     @Override
@@ -27,6 +31,9 @@ public class Login extends Fragment {
         View view = inflater.inflate(R.layout.login_fragment_layout, container, false);
 
         loginButton = (Button) view.findViewById(R.id.loginbtn);
+        registerButton = (Button) view.findViewById(R.id.registerbtn);
+        userName = (Text) view.findViewById(R.id.usernametxt);
+        password = (Text) view.findViewById(R.id.passwordtxt);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
