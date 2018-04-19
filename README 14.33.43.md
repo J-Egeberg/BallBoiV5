@@ -1,15 +1,4 @@
-# BallBoiV5
-
-Requirements details:
- You must write and explain the topic in your article, you can use charts and illustrations. It must be
-4-6 pages.
-o You must introduce the technology/plugin and explain it as if the reader doesn’t know
-anything about it.
-
-Zoom in Overall:
-## Article - Fragments
-
-Purpose of Article
+# Article - Fragments
 
 This Article is created by Casper Gross Larsen and Jens Egeberg Rasmussen. By reading this article you will learn about Fragments and the use of these in our own little school project. But before we can dive into What fragments are, we are gonna talk a little about where fragments are used: in Android-App-Development.
 
@@ -21,17 +10,18 @@ An activity is considered one of the fundamental building blocks of app on an an
 
 Another way to navigate through your activity is by the use of fragments.
 
-A fragment is usually used as part of an activity's user interface and contributes its own layout to the activity. To provide a layout for a fragment, you must implement the onCreateView() callback method, which the Android system calls when it's time for the fragment to draw its layout.
+A fragment is usually used as part of an activity's user interface and contributes its own layout (User Interface) to the activity. To provide a layout for a fragment, you must implement the onCreateView() callback method, which the Android system calls when it's time for the fragment to draw its layout. A Fragment can be called a sub Activity.
 
-https://developer.android.com/guide/components/fragments.html
-
+Fragments are used to create more dynamic and flexible UI designs on larger screens, such as tablets. The larger screen makes more room to combine and interchange UI components (fragments). Fragments allow such designs without the need to manage and save thecomplex changes in the activity. By dividing the Activity into fragments you will be able to modify the activity's appearance at runtime and preserve and save changes in the back, because it is all in the same activity.
 What is the purpose of Fragments?
 
-Android introduced fragments in Android 3.0 (API level 11), primarily to support more dynamic and flexible UI designs on large screens, such as tablets. Because a tablet's screen is much larger than that of a handset, there's more room to combine and interchange UI components. Fragments allow such designs without the need for you to manage complex changes to the view hierarchy. By dividing the layout of an activity into fragments, you become able to modify the activity's appearance at runtime and preserve those changes in a back stack that's managed by the activity. They are now widely available through the fragment support library.
+For example, a news application can use one fragment to show a list of articles on the left and another fragment to display an article on the right—both fragments appear in one activity, side by side, and each fragment has its own set of lifecycle callback methods and handle their own user input events. Thus, instead of using one activity to select an article and another activity to read the article, the user can select an article and read it all within the same activity.
 
-For example, a news application can use one fragment to show a list of articles on the left and another fragment to display an article on the right—both fragments appear in one activity, side by side, and each fragment has its own set of lifecycle callback methods and handle their own user input events. Thus, instead of using one activity to select an article and another activity to read the article, the user can select an article and read it all within the same activity, as illustrated in the tablet layout in figure 1.
+Each fragment should be designet as a modular and reusable activity component. That is because a fragment defines its own layout (User interface) and its own behavior within its own lifecycle and callbacks (code methods used to change the state). Each fragment can be included in multiple activities so the design should be reusable. 
 
-You should design each fragment as a modular and reusable activity component. That is, because each fragment defines its own layout and its own behavior with its own lifecycle callbacks, you can include one fragment in multiple activities, so you should design for reuse and avoid directly manipulating one fragment from another fragment. This is especially important because a modular fragment allows you to change your fragment combinations for different screen sizes. When designing your application to support both tablets and handsets, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset, it might be necessary to separate fragments to provide a single-pane UI when more than one cannot fit within the same activity.
+This is especially important because a modular fragment allows you to change your fragment combinations for different screen sizes. When designing your application to support both tablets and handsets, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset, it might be necessary to separate fragments to provide a single-pane UI when more than one cannot fit within the same activity.
+
+https://developer.android.com/guide/components/fragments.html
 
 What is the alternative?
 
