@@ -7,14 +7,20 @@ o You must introduce the technology/plugin and explain it as if the reader doesn
 anything about it.
 
 Zoom in Overall:
+## Article - Fragments
 
-What is an app:
+Purpose of Article
 
-What is Android:
+This Article is created by Casper Gross Larsen and Jens Egeberg Rasmussen. By reading this article you will learn about Fragments and the use of these in our own little school project. But before we can dive into What fragments are, we are gonna talk a little about where fragments are used: in Android-App-Development.
 
-What is an activity?
+Ano 2018 we are quite sure that everyone knows what an app is. App stands for application and is used as both web-app, desktop-app and mobile-apps. Mobile-apps is where we have been working via android studio which is a tool for creating android-mobile-apps. 
 
-what is a Fragment:
+When you, as a user, open an app, what you see is the apps interface. This interface is probably filled buttons, text and other gadgets. This is an interface for android studio code. And this interface is presented by what is called an activity.
+
+An activity is considered one of the fundamental building blocks of app on an android platform. This is where the user interact with the app, and also servers as a navigator within an app (the back button, and Recents button serves as examples by this). The activity has a lifecycle in which when the user clicks around on the app, the state of the activity changes within the same lifecycle. When the app closes the lifecycle ends but data can still be stored. For instance if you are watching a video on youtube on your phone, and you pause and leave youtube the lifecycle will save the state from which you left the app and will resume next time u enter the app and be ready to continue from where you left off.
+
+Another way to navigate through your activity is by the use of fragments.
+
 A fragment is usually used as part of an activity's user interface and contributes its own layout to the activity. To provide a layout for a fragment, you must implement the onCreateView() callback method, which the Android system calls when it's time for the fragment to draw its layout.
 
 https://developer.android.com/guide/components/fragments.html
