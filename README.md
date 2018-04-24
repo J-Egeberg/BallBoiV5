@@ -41,13 +41,9 @@ Each fragment has its own layout file which is what the user can see and interac
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Layout.png)
 
 How will we use Fragments in our project?
-In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user.
+In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user. Saving the data allows us to save recipes from a specific user and we can then use his name as a key for each recipe and as such create a user binding to each recipe.
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/FragmentManager.png)
-
-
-Navigator
-Saving User information
 
 Why are we using fragments in our project?
 
