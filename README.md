@@ -32,6 +32,8 @@ We are creating a mobile android app in which you can create and login as a user
 How will we use Fragments in our project?
 In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user.
 
+![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/FragmentManager.png)
+
 
 
 
