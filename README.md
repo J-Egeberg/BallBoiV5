@@ -32,7 +32,7 @@ Then ofcourse there is the adding and viewing of recipes. The navigation is crea
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Menu.png)
 
-Each fragment is placed in its own class so each fragment can have the methods and functions that the fragment requires to work as intended. For instance the fragment below
+Each fragment is placed in its own class so each fragment can have the methods and functions that the fragment requires to work as intended. For instance the fragment below is the login fragment and right now it contains a method that when you click the login button it render the fragment Menu which has its own layout file.
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Fragment.png)
 
