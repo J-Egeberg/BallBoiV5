@@ -27,14 +27,23 @@ The main reason to use Fragments are for the backstack and lifecycle features. O
 
 -------------------------------------
 Summing up our school project:
-We are creating a mobile android app in which you can create and login as a user. The user can then choose from a wide variety of recipes or add another recipe for other people to enjoy.
+We are creating a mobile android app in which you can create and login as a user. The user can then choose from a wide variety of recipes or add another recipe for other people to enjoy. First of all a login system is created.
+Then ofcourse there is the adding and viewing of recipes. The navigation is created with fragments. (picture below)
+
+![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Menu.png)
+
+Each fragment is placed in its own class so each fragment can have the methods and functions that the fragment requires to work as intended. For instance the fragment below
+
+![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Fragment.png)
+
+Each fragment has its own layout file which is what the user can see and interact with. So f. ex. the Menu fragment has a menu layout file and so on. So whenever each fragment is called the layout file is rendered. (picture below of layout file).
+
+![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Layout.png)
 
 How will we use Fragments in our project?
 In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user.
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/FragmentManager.png)
-
-
 
 
 Navigator
