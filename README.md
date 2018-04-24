@@ -26,7 +26,7 @@ Alternativvely in Android Development you can use the Activity. The activity is 
 The main reason to use Fragments are for the backstack and lifecycle features. Otherwise, custom views are more light weight and simpler to implement. By using fragments we are able to save the state and benefit from lifecycle features. Another great reason for the use of fragments is its 
 
 -------------------------------------
-Summing up our school project:
+Summing up our school project: <br> <br>
 We are creating a mobile android app in which you can create and login as a user. The user can then choose from a wide variety of recipes or add another recipe for other people to enjoy. First of all a login system is created.
 Then ofcourse there is the adding and viewing of recipes. The navigation is created with fragments. (picture below)
 
@@ -40,14 +40,15 @@ Each fragment has its own layout file which is what the user can see and interac
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/Layout.png)
 
-How will we use Fragments in our project? <br>
+How will we use Fragments in our project? <br> <br>
 In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user. Saving the data allows us to save recipes from a specific user and we can then use his name as a key for each recipe and as such create a user binding to each recipe.
 
 ![alt text](https://github.com/J-Egeberg/BallBoiV5/blob/master/FragmentManager.png)
 
-Why are we using fragments in our project?
 
-Evaluate: How did our use of fragments go?
+Evaluate: How did our use of fragments go? <br> <br>
 
-Was using Fragments the right solution for our project?
+The setup with fragtments has been smooth so far. It's a fantastic way of making the navigation in the project, very smooth. It's simplistic and it's very easy to manage and handle the various classes in our application. We decided to make use of fragments after learning about them in class - It's simply a better way of navigating within a project. 
+
+
 
