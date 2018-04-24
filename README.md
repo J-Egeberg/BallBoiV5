@@ -21,17 +21,22 @@ Each fragment should be designet as a modular and reusable activity component. T
 
 This is especially important because a modular fragment allows you to change your fragment combinations for different screen sizes. When designing your application to support both tablets and handsets, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset, it might be necessary to separate fragments to provide a single-pane UI when more than one cannot fit within the same activity.
 
-https://developer.android.com/guide/components/fragments.html
+Alternativvely in Android Development you can use the Activity. The activity is able to navigate throughout the app aswell and multiple activities can be swapped, however only one activity can be viewed at a time. while multiple fragments can be viewed from within an activity.
 
-What is the alternative?
-
-Just using activities
-
-What is the benefits?
+The main reason to use Fragments are for the backstack and lifecycle features. Otherwise, custom views are more light weight and simpler to implement. By using fragments we are able to save the state and benefit from lifecycle features. Another great reason for the use of fragments is its 
 
 -------------------------------------
+Summing up our school project:
+We are creating a mobile android app in which you can create and login as a user. The user can then choose from a wide variety of recipes or add another recipe for other people to enjoy.
 
 How will we use Fragments in our project?
+In our school project we have decided to use fragments for navigational purposes. The navigation (fragments) is all happening within the Main Activity and is swapped when clicking around on the app by our class SectionStatePagerAdapter (look photo below). We are doin this because we want to save info in the overall activity from a logged in user.
+
+
+
+
+Navigator
+Saving User information
 
 Why are we using fragments in our project?
 
@@ -50,3 +55,4 @@ hands on experience on the topic. The ambition level is prototype level – not 
 code must be well made, so include comments and proper formatting. A few topics are more
 theoretical, and thus may get exemption from handing in code, while other projects may be less
 interesting to describe textually, thus requiring more code effort.
+
