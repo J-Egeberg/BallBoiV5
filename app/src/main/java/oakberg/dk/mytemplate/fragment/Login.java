@@ -33,7 +33,7 @@ public class Login extends Fragment {
         loginButton = (Button) view.findViewById(R.id.loginbtn);
         registerButton = (Button) view.findViewById(R.id.registerbtn);
         //userName = view.findViewById(R.id.usernametxt);
-        //password = view.findViewById(R.id.passwordtxt);
+        // password = view.findViewById(R.id.passwordtxt);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
