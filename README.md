@@ -51,15 +51,3 @@ Evaluate: How did our use of fragments go?
 
 Was using Fragments the right solution for our project?
 
-o You must explain the purpose of the tech, the advantages of using it and what (if any)
-alternatives exist.
-o Explain how you intend to use the tech in your article
-o Describe your solution – what did you do and why?
-o Evaluate your solution – how did it go?
-o Conclusion – Do you recommend the solution and what did you learn
- You must make an android project with a solution about the topic, demonstrating that you had
-hands on experience on the topic. The ambition level is prototype level – not a perfect project. The
-code must be well made, so include comments and proper formatting. A few topics are more
-theoretical, and thus may get exemption from handing in code, while other projects may be less
-interesting to describe textually, thus requiring more code effort.
-
