@@ -42,6 +42,10 @@ alternatives?
 
 Why use it in our app?
 
+In our application, we decided to make use of the localization. In our res folder in the project folder, we have
+placed two flags. One is used for converting resources into danish and the other is the default english language. 
+(The English flag is not yet implemented). 
+
 How did we do it?
 
 Evaluation?
