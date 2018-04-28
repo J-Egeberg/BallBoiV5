@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -24,11 +23,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.fragment.Exit;
 import oakberg.dk.mytemplate.fragment.AddFood;
-import oakberg.dk.mytemplate.fragment.Login;
+// import oakberg.dk.mytemplate.fragment.Login;
 import oakberg.dk.mytemplate.fragment.Menu;
 import oakberg.dk.mytemplate.fragment.MyRecipes;
 import oakberg.dk.mytemplate.fragment.AllRecipes;
 import oakberg.dk.mytemplate.fragment.ProfileActivity;
+import oakberg.dk.mytemplate.fragment.SignupActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -47,27 +47,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog progressDialog;
     ProgressBar progressBar;
 
-    private FirebaseAuth firebaseAuth;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        progressDialog = new ProgressDialog(this);
-
-
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        mAuth = FirebaseAuth.getInstance();
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
-        textViewSignin = (TextView) findViewById(R.id.textViewSignin);
-
-        buttonRegister.setOnClickListener(this);
-        textViewSignin.setOnClickListener(this);
+        findViewById(R.id.textViewSignup).setOnClickListener(this);
+        findViewById(R.id.buttonLogin).setOnClickListener(this);
 
 
         Log.d(TAG, "onCreate: Started.");
@@ -82,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setUpViewPager(ViewPager viewPager) {
         SectionStatePagerAdapter adapter = new SectionStatePagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Login(), "Login");
+        // adapter.addFragment(new Login(), "Login");
         adapter.addFragment(new Menu(), "Menu");
         adapter.addFragment(new MyRecipes(), "My Recipes");
         adapter.addFragment(new AllRecipes(), "All Recipes");
@@ -132,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         progressBar.setVisibility(View.VISIBLE);
 
-        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
@@ -158,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
 
-        if (firebaseAuth.getCurrentUser() != null) {
+        if (mAuth.getCurrentUser() != null) {
             finish();
             startActivity(new Intent(this, ProfileActivity.class));
 
@@ -170,17 +167,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.textViewSignin:
-            finish();
-            startActivity(new Intent(this, Login.class));
-            break;
+            case R.id.textViewSignup:
+                finish();
+                startActivity(new Intent(this, SignupActivity.class));
+                break;
 
             case R.id.buttonLogin:
                 userLogin();
                 break;
-
         }
     }
-
-
 }

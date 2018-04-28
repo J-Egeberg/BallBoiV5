@@ -20,6 +20,9 @@
 
         </activity>
         <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".fragment.ProfileActivity"></activity>
+
+
 
     </application>
 

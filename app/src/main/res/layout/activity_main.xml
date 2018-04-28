@@ -24,7 +24,10 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/app_logo" />
+            >
+
+        </ImageView>
+
 
     </RelativeLayout>
 
@@ -70,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
-                android:background="@drawable/rounded_button_transparent"
+
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent" />
