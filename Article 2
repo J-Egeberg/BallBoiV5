@@ -46,9 +46,8 @@ In our application, we decided to make use of the localization. In our res folde
 placed two flags. One is used for converting resources into danish and the other is the default english language. 
 (The English flag is not yet implemented). 
 
-[[https://raw.githubusercontent.com/J-Egeberg/BallBoiV5/blob/master/local.png]]
+[[https://github.com/J-Egeberg/BallBoiV5/blob/master/local.png|alt=local]]
 
-[[https://github.com/J-Egeberg/BallBoiV5/blob/master/img/octocat.png|alt=octocat]]
 How did we do it?
 
 Evaluation?
