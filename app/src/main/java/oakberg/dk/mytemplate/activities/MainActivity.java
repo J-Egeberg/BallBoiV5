@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager viewPager;
 
 
-    /* FOR LOGIN PURPOSES */
     private Button buttonRegister;
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -51,9 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
