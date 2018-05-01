@@ -1,58 +1,27 @@
 {
   "project_info": {
-    "project_number": "344679644765",
-    "firebase_url": "https://fantasticproject-fce02.firebaseio.com",
-    "project_id": "fantasticproject-fce02",
-    "storage_bucket": "fantasticproject-fce02.appspot.com"
+    "project_number": "1048321372155",
+    "firebase_url": "https://cheapfoodz-54843.firebaseio.com",
+    "project_id": "cheapfoodz-54843",
+    "storage_bucket": "cheapfoodz-54843.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:344679644765:android:9ef7d1f5880f3eb9",
+        "mobilesdk_app_id": "1:1048321372155:android:9ef7d1f5880f3eb9",
         "android_client_info": {
           "package_name": "oakberg.dk.mytemplate"
         }
       },
       "oauth_client": [
         {
-          "client_id": "344679644765-s48shc8qkv4q51ltq1aeeg66r920khsa.apps.googleusercontent.com",
+          "client_id": "1048321372155-4l3ldrjiuk00c3k9ma33ugqnnuc5v1oi.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZnLFnUll8w3Wf0ecwy0zaZVbOxvifWVA"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:344679644765:android:5c3b45827af9bced",
-        "android_client_info": {
-          "package_name": "oakberg.dk.BallBoiV4"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "344679644765-s48shc8qkv4q51ltq1aeeg66r920khsa.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDZnLFnUll8w3Wf0ecwy0zaZVbOxvifWVA"
+          "current_key": "AIzaSyALpfyMBYrerHF2Z_HajxaN-FgGUEdK3EE"
         }
       ],
       "services": {
