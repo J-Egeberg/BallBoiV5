@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setUpViewPager(ViewPager viewPager) {
         SectionStatePagerAdapter adapter = new SectionStatePagerAdapter(getSupportFragmentManager());
         // adapter.addFragment(new Login(), "Login");
+        adapter.addFragment(new SignupActivity(), "hej");
         adapter.addFragment(new Menu(), "Menu");
         adapter.addFragment(new MyRecipes(), "My Recipes");
         adapter.addFragment(new AllRecipes(), "All Recipes");

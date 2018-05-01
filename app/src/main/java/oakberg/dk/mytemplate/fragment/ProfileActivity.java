@@ -1,16 +1,21 @@
 package oakberg.dk.mytemplate.fragment;
 
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -51,7 +56,7 @@ import java.io.IOException;
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends Fragment {
 
     private static final int CHOOSE_IMAGE = 101;
 
@@ -67,18 +72,17 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_activity);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+        View view = inflater.inflate(R.layout.profile_activity, container, false);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        editText = (EditText) findViewById(R.id.editTextDisplayName);
-        imageView = (ImageView) findViewById(R.id.imageView);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
-        textView = (TextView) findViewById(R.id.textViewVerified);
+
+        editText = (EditText) view.findViewById(R.id.editTextDisplayName);
+        imageView = (ImageView) view.findViewById(R.id.imageView);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
+        textView = (TextView) view.findViewById(R.id.textViewVerified);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +93,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         loadUserInformation();
 
-        findViewById(R.id.buttonSave).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.buttonSave).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -97,14 +101,15 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+        return view;
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         if (firebaseAuth.getCurrentUser() == null) {
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
+
+            startActivity(new Intent(getActivity(), MainActivity.class));
         }
 
     }
@@ -130,7 +135,7 @@ public class ProfileActivity extends AppCompatActivity {
                         user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
-                                Toast.makeText(ProfileActivity.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Verification Email Sent", Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -170,7 +175,7 @@ public class ProfileActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(ProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(),  "Profile Updated", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
