@@ -6,53 +6,71 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
+import oakberg.dk.mytemplate.entity.User;
 
-public class SignupActivity extends Fragment implements OnClickListener {
+public class Login extends Fragment {
 
-    ProgressBar progressBar;
-    EditText editTextEmail, editTextPassword;
+
+    private EditText editTextEmail;
+    private EditText editTextPassword;
+    private Button login;
+    private TextView signUp;
 
     private FirebaseAuth mAuth;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.signup_activity, container, false);
+        View view = inflater.inflate(R.layout.signin_fragment_layout, container, false);
         super.onCreate(savedInstanceState);
 
 
-        editTextEmail = (EditText) view.findViewById(R.id.editTextEmail);
+        editTextEmail = view.findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) view.findViewById(R.id.editTextPassword);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
 
-        mAuth = FirebaseAuth.getInstance();
+        signUp = view.findViewById(R.id.textViewSignup);
+        login = view.findViewById(R.id.buttonLogin);
 
-        view.findViewById(R.id.buttonSignUp).setOnClickListener(this);
-        view.findViewById(R.id.textViewLogin).setOnClickListener(this);
+        signUp.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Going to Sign Up Menu", Toast.LENGTH_SHORT).show();
+                ((MainActivity)getActivity()).setViewPager(1);
+            }
+        });
+
+        login.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userLogin();
+            }
+        });
+
 
         return view;
     }
 
 
 
-    private void registerUser() {
+    private void userLogin() {
+
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
@@ -75,47 +93,40 @@ public class SignupActivity extends Fragment implements OnClickListener {
         }
 
         if (password.length() < 6) {
-            editTextPassword.setError("Minimum length of password should be 6");
+            editTextPassword.setError("Minimum lenght of password should be 6");
             editTextPassword.requestFocus();
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
-
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
-                if (task.isSuccessful()) {
 
-                    startActivity(new Intent(getActivity(), ProfileActivity.class));
-                    Toast.makeText(getActivity(), "Registered succesfully - please login", Toast.LENGTH_SHORT).show();
+                if(task.isSuccessful()) {
+                    Intent intent = new Intent(getActivity(), User.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
                 } else {
 
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                        Toast.makeText(getActivity(), "You are already registered", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
+                    Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                 }
+
             }
         });
 
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.buttonSignUp:
-                registerUser();
-                break;
+    public void onStart() {
+        super.onStart();
 
-            case R.id.textViewLogin:
+        if (mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getActivity(), User.class));
 
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                break;
         }
     }
-}
+
+
+    }
