@@ -13,7 +13,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,7 +44,7 @@ public class Login extends Fragment {
         editTextEmail = view.findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) view.findViewById(R.id.editTextPassword);
 
-        signUp = view.findViewById(R.id.textViewSignup);
+        signUp = view.findViewById(R.id.textViewSignUp);
         login = view.findViewById(R.id.buttonLogin);
 
         signUp.setOnClickListener(new OnClickListener() {
@@ -122,10 +121,10 @@ public class Login extends Fragment {
     public void onStart() {
         super.onStart();
 
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getActivity(), User.class));
-
-        }
+//        if (mAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getActivity(), User.class));
+//
+//        }
     }
 
 
