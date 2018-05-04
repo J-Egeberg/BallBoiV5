@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
@@ -30,8 +32,6 @@ public class Login extends Fragment {
     private EditText editTextPassword;
     private Button login;
     private TextView signUp;
-
-    private FirebaseAuth mAuth;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -68,6 +68,8 @@ public class Login extends Fragment {
 
     private void userLogin() {
 
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
 
@@ -98,6 +100,11 @@ public class Login extends Fragment {
                     ((MainActivity)getActivity()).setViewPager(2);
 
                     //her vil vi evt gerne gemme bruger info så vi kan bruge det på recipes
+
+                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
+                    //kan se vi er logget på den rigtige user i loggen
+                    Log.d("authentication","User: " + firebaseUser.getEmail());
 
                 } else {
 
