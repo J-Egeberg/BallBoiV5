@@ -1,7 +1,5 @@
 package oakberg.dk.mytemplate.fragment;
 
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -70,8 +68,8 @@ public class Login extends Fragment {
 
     private void userLogin() {
 
-        String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
+        String email = editTextEmail.getText().toString();
+        String password = editTextPassword.getText().toString();
 
         if (email.isEmpty()) {
             editTextEmail.setError("Email is required");
@@ -91,26 +89,21 @@ public class Login extends Fragment {
             return;
         }
 
-        if (password.length() < 6) {
-            editTextPassword.setError("Minimum lenght of password should be 6");
-            editTextPassword.requestFocus();
-            return;
-        }
-
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()) {
-                    Intent intent = new Intent(getActivity(), User.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
                     Toast.makeText(getActivity(), "User Credentials Accepted", Toast.LENGTH_SHORT).show();
                     ((MainActivity)getActivity()).setViewPager(2);
+
+                    //her vil vi evt gerne gemme bruger info så vi kan bruge det på recipes
 
                 } else {
 
                     Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    ((MainActivity)getActivity()).setViewPager(0);
+                    Toast.makeText(getActivity(), "Something happened - please try again", Toast.LENGTH_SHORT).show();
 
                 }
 
