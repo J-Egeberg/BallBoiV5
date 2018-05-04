@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+
+    tools:context=".fragment.SignUp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,10 +17,8 @@
             android:layout_width="85dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true">
-
-        </ImageView>
-
+            android:layout_centerVertical="true"
+             />
 
     </RelativeLayout>
 
@@ -59,22 +58,22 @@
                 android:textColorHint="@color/colorAccent" />
 
             <Button
-                android:id="@+id/buttonSignUp"
+                android:id="@+id/buttonLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
 
-                android:text="Sign Up"
+                android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent" />
 
             <TextView
-                android:id="@+id/textViewLogin"
+                android:id="@+id/textViewSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Already have an account? Login"
+                android:text="Dont have an acount? Sign Up"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorAccent" />
@@ -95,5 +94,3 @@
 
 
 </LinearLayout>
-
-
