@@ -105,6 +105,8 @@ public class Login extends Fragment {
                     Intent intent = new Intent(getActivity(), User.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    Toast.makeText(getActivity(), "User Credentials Accepted", Toast.LENGTH_SHORT).show();
+                    ((MainActivity)getActivity()).setViewPager(2);
 
                 } else {
 

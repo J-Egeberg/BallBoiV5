@@ -20,7 +20,7 @@
 
         </activity>
         <activity android:name=".activities.MainActivity"></activity>
-        <activity android:name=".fragment.ProfileActivity"></activity>
+        <activity android:name=".entity.User"></activity>
         <activity android:name=".fragment.SignUp"></activity>
 
 

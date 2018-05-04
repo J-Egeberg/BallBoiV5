@@ -27,7 +27,7 @@ import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
 import oakberg.dk.mytemplate.entity.User;
 
-public class SignUp extends Fragment implements OnClickListener {
+public class SignUp extends Fragment {
 
     ProgressBar progressBar;
     EditText editTextEmail, editTextPassword;
@@ -101,23 +101,23 @@ public class SignUp extends Fragment implements OnClickListener {
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
-
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
-
-                    startActivity(new Intent(getActivity(), User.class));
+                    //startActivity(new Intent(getContext(), User.class));
                     Toast.makeText(getActivity(), "Registered succesfully - please login", Toast.LENGTH_SHORT).show();
+                    ((MainActivity)getActivity()).setViewPager(0);
                 } else {
 
                     if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                        Toast.makeText(getActivity(), "You are already registered", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "User already registered - please login", Toast.LENGTH_SHORT).show();
+                        ((MainActivity)getActivity()).setViewPager(0);
 
                     } else {
                         Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Error - please try again", Toast.LENGTH_SHORT).show();
+                        ((MainActivity)getActivity()).setViewPager(1);
                     }
 
                 }
@@ -128,17 +128,4 @@ public class SignUp extends Fragment implements OnClickListener {
 
     // REMEMBER LOGIN CLASS IS RESPONSBLE FOR HANDLING SIGNUP
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.buttonSignUp:
-                registerUser();
-                break;
-
-            case R.id.textViewLogin:
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                //userLogin();
-                break;
-        }
-    }
 }
