@@ -33,6 +33,8 @@ public class Login extends Fragment {
     private Button login;
     private TextView signUp;
 
+    private FirebaseAuth mAuth;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.signin_fragment_layout, container, false);
@@ -68,7 +70,7 @@ public class Login extends Fragment {
 
     private void userLogin() {
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();

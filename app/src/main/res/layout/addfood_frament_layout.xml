@@ -10,4 +10,26 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Add Food" />
+
+
+    <Button
+        android:id="@+id/ChooseImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chose Image" />
+
+    <EditText
+        android:id="@+id/GuideEditText"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:ems="10"
+        android:hint="Please type in a guide"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/AddRecipeButton"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:text="Add Recipe" />
 </LinearLayout>

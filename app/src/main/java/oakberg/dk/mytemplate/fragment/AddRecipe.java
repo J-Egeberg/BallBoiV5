@@ -13,7 +13,7 @@ import oakberg.dk.mytemplate.R;
  * Created by Oakberg on 06/04/2018.
  */
 
-public class AddFood extends Fragment {
+public class AddRecipe extends Fragment {
 
     @Nullable
     @Override
