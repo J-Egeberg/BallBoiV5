@@ -50,7 +50,7 @@ public class Login extends Fragment {
         signUp.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Sign Up Menu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Create your account here!", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(1);
             }
         });
@@ -98,7 +98,7 @@ public class Login extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()) {
-                    Toast.makeText(getActivity(), "User Credentials Accepted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "User Credentials Accepted - Welcome ", Toast.LENGTH_SHORT).show();
                     ((MainActivity)getActivity()).setViewPager(2);
 
                     //her vil vi evt gerne gemme bruger info så vi kan bruge det på recipes
