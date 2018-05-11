@@ -3,51 +3,33 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/ChooseImageButton"
-        android:layout_width="75dp"
-        android:layout_height="58dp"
-        android:layout_alignParentStart="true"
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/roundbutton"
-        android:text="Choose Image"
-        android:textSize="15dp" />
-
-    <EditText
-        android:id="@+id/GuideEditText"
-        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="163dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="211dp"
-        android:ems="10"
-        android:hint="Please type in a guide"
-        android:inputType="textMultiLine" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/AddRecipeButton"
+        <Button
+            android:id="@+id/btnChoose"
+            android:text="Choose"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:text="Upload"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="57dp"
-        android:background="@drawable/roundbutton"
-        android:text="Add Recipe"
-        android:textSize="15dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="75dp"
-        android:layout_height="58dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/ChooseImageButton"
-        android:layout_marginEnd="70dp"
-        android:background="@drawable/roundbutton"
-        android:text="Upload Image"
-        android:textSize="15dp" />
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
+
