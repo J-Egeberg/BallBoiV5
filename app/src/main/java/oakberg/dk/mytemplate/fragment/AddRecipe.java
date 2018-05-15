@@ -35,7 +35,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by Oakberg on 06/04/2018.
  */
 
-public class AddRecipe extends Fragment implements View.OnClickListener {
+public class AddRecipe extends Fragment {
 
     private Button btnChoose, btnUpload;
     private ImageView imageView;
@@ -62,6 +62,7 @@ public class AddRecipe extends Fragment implements View.OnClickListener {
         storageReference = storage.getReference();
 
 
+
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,10 +72,10 @@ public class AddRecipe extends Fragment implements View.OnClickListener {
 
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 uploadImage();
             }
-        });
+        } );
 
         return view;
 
