@@ -27,7 +27,6 @@ import java.io.IOException;
 import java.util.UUID;
 
 import oakberg.dk.mytemplate.R;
-import oakberg.dk.mytemplate.activities.MainActivity;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -50,7 +49,7 @@ public class AddRecipe extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.addfood_frament_layout, container, false);
+        View view = inflater.inflate(R.layout.addfood_fragment_layout, container, false);
 
         // Initialzing views for btns
 
@@ -86,7 +85,7 @@ public class AddRecipe extends Fragment {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select picture pwease!"), PICK_IMAGE_REQUEST);
+        startActivityForResult(Intent.createChooser(intent, "Select picture please!"), PICK_IMAGE_REQUEST);
     }
 
     @Override
