@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/knife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:background="@drawable/knife" />
+
+    <Button
+        android:id="@+id/addrecipebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/roundbutton"
+        android:text="Add Recipe" />
 
     <Button
         android:id="@+id/myrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="-100dp"
         android:background="@drawable/roundbutton"
         android:text="My Recipes" />
 
@@ -16,20 +38,18 @@
         android:id="@+id/allrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="-50dp"
         android:background="@drawable/roundbutton"
         android:text="All Recipes" />
-
-    <Button
-        android:id="@+id/addrecipebtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/roundbutton"
-        android:text="Add Recipe" />
 
     <Button
         android:id="@+id/exitbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:background="@drawable/roundbutton"
         android:text="Logout" />
-</LinearLayout>
+
+</FrameLayout>
+
