@@ -1,11 +1,14 @@
 package oakberg.dk.mytemplate.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -14,6 +17,7 @@ import java.util.ArrayList;
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.entity.Recipe;
 import oakberg.dk.mytemplate.entity.RecipeAdapter;
+import oakberg.dk.mytemplate.entity.RecipeDetail;
 
 
 /**
@@ -37,6 +41,28 @@ public class AllRecipes extends Fragment {
 
         RecipeAdapter adapter = new RecipeAdapter(getActivity(), recipeList);
         mListView.setAdapter(adapter);
+
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // getting recipeList object, that is clicked
+                Recipe selectedRecipe = recipeList.get(position);
+
+                // Intent created to navigate
+                Intent detailIntent = new Intent(getActivity(), RecipeDetail.class);
+
+                // DetailActivity needs to know the title and url to display passing data via the intent
+                detailIntent.putExtra("title", selectedRecipe.title);
+                detailIntent.putExtra("url", selectedRecipe.instructionUrl);
+
+                //
+                startActivity(detailIntent);
+            }
+
+        });
 
 
         return view;
