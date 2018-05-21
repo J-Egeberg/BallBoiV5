@@ -75,7 +75,7 @@ public class AddRecipe extends Fragment {
             public void onClick(View view) {
                 uploadImage();
             }
-        } );
+        });
 
         return view;
 
