@@ -22,16 +22,17 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="0dp"
         android:background="@drawable/roundbutton"
-        android:text="Add Recipe" />
+        android:text="@string/add_recipe_btn" />
 
     <Button
+        android:name="hej"
         android:id="@+id/myrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="-100dp"
         android:background="@drawable/roundbutton"
-        android:text="My Recipes" />
+        android:text="@string/my_recipe_btn" />
 
 
     <Button
@@ -41,7 +42,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="-50dp"
         android:background="@drawable/roundbutton"
-        android:text="All Recipes" />
+        android:text="@string/all_recipe_btn" />
 
     <Button
         android:id="@+id/exitbtn"
@@ -49,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@drawable/roundbutton"
-        android:text="Logout" />
+        android:text="@string/logout_btn" />
 
 </FrameLayout>
 

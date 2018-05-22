@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AndroidApp</string>
-    <string name="TopTitle">AndroidApp</string>
+    <string name="add_recipe_btn">Tilføj Opskrift</string>
+    <string name="my_recipe_btn">Mine Opskrifter</string>
+    <string name="all_recipe_btn">Alle Opskrifter</string>
+    <string name="logout_btn">Log ud</string>
 </resources>
