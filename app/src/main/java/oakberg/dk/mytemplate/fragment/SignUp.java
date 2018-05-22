@@ -25,7 +25,6 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.activities.MainActivity;
-import oakberg.dk.mytemplate.entity.User;
 
 public class SignUp extends Fragment {
 
