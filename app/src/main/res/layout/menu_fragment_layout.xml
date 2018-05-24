@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-130dp"
         android:background="@drawable/roundbutton"
         android:text="@string/add_recipe_btn" />
 
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-230dp"
         android:background="@drawable/roundbutton"
         android:text="@string/my_recipe_btn" />
 
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="-180dp"
         android:background="@drawable/roundbutton"
         android:text="@string/all_recipe_btn" />
 
@@ -51,6 +51,12 @@
         android:layout_gravity="bottom"
         android:background="@drawable/roundbutton"
         android:text="@string/logout_btn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        app:srcCompat="@drawable/cheap" />
 
 </FrameLayout>
 
