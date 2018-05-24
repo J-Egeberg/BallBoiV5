@@ -1,7 +1,22 @@
 <resources>
     <string name="app_name">AndroidApp</string>
+
+    <string name="Loginusernamefield">Email</string>
+    <string name="Loginpasswordfield">Kodeord</string>
+    <string name="loginbutton">Login</string>
+    <string name="signupbuttondirector">Har du ikke en bruger? Lav en her</string>
+
+    <string name="signinusernamefield">Email</string>
+    <string name="signinpasswordfield">Password</string>
+    <string name="signinbutton">Tilmeld</string>
+    <string name="loginbuttondirector">Har du allerede en bruger? Login</string>
+
     <string name="add_recipe_btn">Tilføj Opskrift</string>
     <string name="my_recipe_btn">Mine Opskrifter</string>
     <string name="all_recipe_btn">Alle Opskrifter</string>
     <string name="logout_btn">Log ud</string>
+
+    <string name="addrecipechoosebtn">Vælg Billede</string>
+    <string name="addrecipeuploadbtn">Upload</string>
+
 </resources>

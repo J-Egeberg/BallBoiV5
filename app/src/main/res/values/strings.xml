@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">Cheapfoodz</string>
 
+    <string name="Loginusernamefield">Email</string>
+    <string name="Loginpasswordfield">Password</string>
+    <string name="loginbutton">Login</string>
+    <string name="signupbuttondirector">Dont have an account? Sign Up</string>
+
+    <string name="signinusernamefield">Email</string>
+    <string name="signinpasswordfield">Password</string>
+    <string name="signinbutton">Sign Up</string>
+    <string name="loginbuttondirector">Already have an account? Login</string>
+
     <string name="add_recipe_btn">Add Recipe</string>
     <string name="my_recipe_btn">My Recipes</string>
     <string name="all_recipe_btn">All Recipes</string>
     <string name="logout_btn">Logout</string>
 
-
+    <string name="addrecipechoosebtn">Choose Image</string>
+    <string name="addrecipeuploadbtn">Upload</string>
 </resources>

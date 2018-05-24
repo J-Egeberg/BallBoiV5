@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Choose"
+            android:text="@string/addrecipechoosebtn"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/roundbutton"
             android:textStyle="bold" />
@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Upload"
+            android:text="@string/addrecipeuploadbtn"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/roundbutton"
             android:textStyle="bold" />

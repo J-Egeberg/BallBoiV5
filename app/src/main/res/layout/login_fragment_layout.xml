@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/editTextPassword"
         android:fontFamily="sans-serif"
-        android:hint="Email.."
+        android:hint="@string/Loginusernamefield"
         android:inputType="textEmailAddress"
         android:paddingBottom="15dp"
         android:textAlignment="center"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:fontFamily="sans-serif"
-        android:hint="Password"
+        android:hint="@string/Loginpasswordfield"
         android:inputType="textPassword"
         android:paddingBottom="15dp"
         android:textAlignment="center"
@@ -43,7 +43,7 @@
         android:layout_alignParentStart="true"
         android:layout_gravity="center_vertical"
         android:background="@drawable/roundbutton"
-        android:text="Sign Up"
+        android:text="@string/loginbutton"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent" />
 
@@ -55,7 +55,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="37dp"
         android:padding="15dp"
-        android:text="Already have an account? Login"
+        android:text="@string/signupbuttondirector"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorAccent" />

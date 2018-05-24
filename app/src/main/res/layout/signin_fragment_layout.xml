@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:hint="Type email here.."
+                android:hint="@string/Loginusernamefield"
                 android:inputType="textEmailAddress"
                 android:paddingBottom="15dp"
                 android:textColorHint="@color/colorAccent" />
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:hint="Password"
+                android:hint="@string/Loginpasswordfield"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp"
                 android:textColorHint="@color/colorAccent"
@@ -51,7 +51,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
 
-                android:text="Login"
+                android:text="@string/loginbutton"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Dont have an acount? \n \n Go to SignUp"
+                android:text="@string/signupbuttondirector"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorAccent" />
