@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/editTextPassword"
         android:fontFamily="sans-serif"
-        android:hint="Type email here.."
+        android:hint="Email.."
         android:inputType="textEmailAddress"
         android:paddingBottom="15dp"
         android:textAlignment="center"

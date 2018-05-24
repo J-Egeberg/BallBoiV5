@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity{
         adapter.addFragment(new MyRecipes(), "My Recipes");
         adapter.addFragment(new AllRecipes(), "All Recipes");
         adapter.addFragment(new AddRecipe(), "Add Food");
-        adapter.addFragment(new Exit(), "Exit");
         viewPager.setAdapter(adapter);
     }
 
@@ -73,7 +72,19 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        viewPager.setCurrentItem(0);
+
+        if(viewPager.getCurrentItem()==3) {
+            viewPager.setCurrentItem(2);
+        }
+        if(viewPager.getCurrentItem()==4) {
+            viewPager.setCurrentItem(2);
+        }
+        if(viewPager.getCurrentItem()==5) {
+            viewPager.setCurrentItem(2);
+        }
+        if(viewPager.getCurrentItem()==2) {
+            viewPager.setCurrentItem(0);
+        }
     }
 
     }

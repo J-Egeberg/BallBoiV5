@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import oakberg.dk.mytemplate.R;
+import oakberg.dk.mytemplate.activities.MainActivity;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -140,4 +141,5 @@ public class AddRecipe extends Fragment {
                     });
         }
     }
+
 }

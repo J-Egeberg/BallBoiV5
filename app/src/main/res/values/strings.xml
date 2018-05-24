@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Cheapfoodz</string>
+
     <string name="add_recipe_btn">Add Recipe</string>
     <string name="my_recipe_btn">My Recipes</string>
     <string name="all_recipe_btn">All Recipes</string>
     <string name="logout_btn">Logout</string>
+
+
 </resources>
