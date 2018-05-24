@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/knife">
 
     <LinearLayout
         android:id="@+id/layout_button"
@@ -18,6 +19,7 @@
             android:layout_weight="1"
             android:text="Choose"
             android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/roundbutton"
             android:textStyle="bold" />
 
         <Button
@@ -27,6 +29,7 @@
             android:layout_weight="1"
             android:text="Upload"
             android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/roundbutton"
             android:textStyle="bold" />
     </LinearLayout>
 
