@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import oakberg.dk.mytemplate.R;
-import oakberg.dk.mytemplate.fragment.Exit;
 import oakberg.dk.mytemplate.fragment.AddRecipe;
 import oakberg.dk.mytemplate.fragment.Login;
 import oakberg.dk.mytemplate.fragment.Menu;
