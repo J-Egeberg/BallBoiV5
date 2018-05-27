@@ -115,13 +115,14 @@ public class AddRecipe extends Fragment {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString()+ ".png");
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             Toast.makeText(getActivity(), "Uploaded", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), ""+ref, Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
