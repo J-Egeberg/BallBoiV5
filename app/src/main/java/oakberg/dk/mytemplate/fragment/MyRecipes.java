@@ -23,6 +23,8 @@ import oakberg.dk.mytemplate.activities.MainActivity;
 public class MyRecipes extends Fragment {
     private static final String TAG = "Menu";
 
+    private AddRecipe addRecipe;
+
     private ImageView imageView;
 
     @Nullable
@@ -33,7 +35,7 @@ public class MyRecipes extends Fragment {
         imageView = (ImageView) view.findViewById(R.id.image);
 
 
-        String url = "https://firebasestorage.googleapis.com/v0/b/cheapfoodz-54843.appspot.com/o/images%2F6695b573-ecd9-462b-b236-ec4e731e926d?alt=media&token=b149cc12-6af9-407b-992b-8ee4d9264ec0";
+        String url = "https://firebasestorage.googleapis.com/v0/b/cheapfoodz-54843.appspot.com/o/images%2Fbcbd5b16-4c67-4952-a319-38422b836b6d.png?alt=media&token=a3d618ff-f8c5-4351-a17e-2db1055ac7e5";
 
         Glide.with(getActivity().getApplicationContext()).load(url).into(imageView);
 

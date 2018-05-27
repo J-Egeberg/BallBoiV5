@@ -24,10 +24,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import oakberg.dk.mytemplate.R;
-import oakberg.dk.mytemplate.activities.MainActivity;
 
 import static android.app.Activity.RESULT_OK;
 
