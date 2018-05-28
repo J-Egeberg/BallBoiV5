@@ -23,6 +23,7 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".entity.User" />
         <activity android:name=".fragment.SignUp" />
+        <activity android:name=".fragment.ImagesActivity" />
         <activity android:name=".entity.RecipeDetail"></activity>
     </application>
 

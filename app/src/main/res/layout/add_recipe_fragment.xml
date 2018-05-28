@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@drawable/knife">
 
-    <LinearLayout
-        android:id="@+id/layout_button"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnChoose"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/addrecipechoosebtn"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/roundbutton"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnUpload"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/addrecipeuploadbtn"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/roundbutton"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imgView"
-        android:layout_width="match_parent"
-        android:layout_height="314dp"
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="66dp" />
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="59dp"
+        android:layout_weight="1"
+        android:background="@drawable/roundbutton"
+        android:text="@string/addrecipechoosebtn"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter recipe name!" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="284dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_view_show_uploads" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnChoose"
+        android:layout_marginEnd="34dp"
+        android:layout_weight="1"
+        android:background="@drawable/roundbutton"
+        android:text="@string/addrecipeuploadbtn"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="149dp"
+        android:background="@drawable/roundbutton"
+        android:text="Show Recipes"
+        android:textSize="18sp" />
+
+
+
 
 </RelativeLayout>
 

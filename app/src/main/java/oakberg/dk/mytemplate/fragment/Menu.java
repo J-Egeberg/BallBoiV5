@@ -62,7 +62,7 @@ public class Menu extends Fragment {
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Exiting", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Logged out successfully", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(0);
             }
         });
