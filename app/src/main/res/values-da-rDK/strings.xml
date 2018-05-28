@@ -11,8 +11,7 @@
     <string name="signinbutton">Tilmeld</string>
     <string name="loginbuttondirector">Har du allerede en bruger? Login</string>
 
-    <string name="add_recipe_btn">Tilføj Opskrift</string>
-    <string name="my_recipe_btn">Mine Opskrifter</string>
+    <string name="add_recipe_btn">Tilføj Eller Se Bruger-Opskrifter</string>
     <string name="all_recipe_btn">Alle Opskrifter</string>
     <string name="logout_btn">Log ud</string>
 

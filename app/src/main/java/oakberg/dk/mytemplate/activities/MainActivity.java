@@ -16,7 +16,6 @@ import oakberg.dk.mytemplate.R;
 import oakberg.dk.mytemplate.fragment.AddRecipe;
 import oakberg.dk.mytemplate.fragment.Login;
 import oakberg.dk.mytemplate.fragment.Menu;
-import oakberg.dk.mytemplate.fragment.MyRecipes;
 import oakberg.dk.mytemplate.fragment.AllRecipes;
 //import oakberg.dk.mytemplate.fragment.ProfileActivity;
 import oakberg.dk.mytemplate.fragment.SignUp;
@@ -59,9 +58,8 @@ public class MainActivity extends AppCompatActivity{
         adapter.addFragment(new Login(), "Login");
         adapter.addFragment(new SignUp(), "Sign up");
         adapter.addFragment(new Menu(), "Menu");
-        adapter.addFragment(new MyRecipes(), "My Recipes");
-        adapter.addFragment(new AllRecipes(), "All Recipes");
-        adapter.addFragment(new AddRecipe(), "Add Food");
+        adapter.addFragment(new AllRecipes(), "Our Recipes");
+        adapter.addFragment(new AddRecipe(), "Your Recipes");
         viewPager.setAdapter(adapter);
     }
 
@@ -75,13 +73,10 @@ public class MainActivity extends AppCompatActivity{
         if(viewPager.getCurrentItem()==3) {
             viewPager.setCurrentItem(2);
         }
-        if(viewPager.getCurrentItem()==4) {
+        else if(viewPager.getCurrentItem()==4) {
             viewPager.setCurrentItem(2);
         }
-        if(viewPager.getCurrentItem()==5) {
-            viewPager.setCurrentItem(2);
-        }
-        if(viewPager.getCurrentItem()==2) {
+        else if(viewPager.getCurrentItem()==2) {
             viewPager.setCurrentItem(0);
         }
     }

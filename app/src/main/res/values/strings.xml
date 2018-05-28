@@ -11,9 +11,8 @@
     <string name="signinbutton">Sign Up</string>
     <string name="loginbuttondirector">Already have an account? Login</string>
 
-    <string name="add_recipe_btn">Add Recipe</string>
-    <string name="my_recipe_btn">My Recipes</string>
-    <string name="all_recipe_btn">All Recipes</string>
+    <string name="add_recipe_btn">View or Add User-Recipes</string>
+    <string name="all_recipe_btn">Our Recipes</string>
     <string name="logout_btn">Logout</string>
 
     <string name="addrecipechoosebtn">Choose Image</string>

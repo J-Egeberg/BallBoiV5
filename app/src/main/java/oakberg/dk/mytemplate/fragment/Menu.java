@@ -30,33 +30,24 @@ public class Menu extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.menu_fragment_layout, container, false);
 
-        myRecipe = (Button) view.findViewById(R.id.myrecipesbtn);
         allRecipe = (Button) view.findViewById(R.id.allrecipesbtn);
         addRecipe = (Button) view.findViewById(R.id.addrecipebtn);
         exitBtn = (Button) view.findViewById(R.id.exitbtn);
         Log.d(TAG, "onCreateView: started.");
 
-        myRecipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(getActivity(), "Going to My Recipes", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(3);
-            }
-        });
         allRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Toast.makeText(getActivity(), "Going to All Recipes", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(4);
+                ((MainActivity)getActivity()).setViewPager(3);
             }
         });
         addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Going to Add Food", Toast.LENGTH_SHORT).show();
-                ((MainActivity)getActivity()).setViewPager(5);
+                ((MainActivity)getActivity()).setViewPager(4);
             }
         });
         exitBtn.setOnClickListener(new View.OnClickListener() {

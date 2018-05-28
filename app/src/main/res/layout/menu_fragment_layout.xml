@@ -25,17 +25,6 @@
         android:text="@string/add_recipe_btn" />
 
     <Button
-        android:name="hej"
-        android:id="@+id/myrecipesbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="-230dp"
-        android:background="@drawable/roundbutton"
-        android:text="@string/my_recipe_btn" />
-
-
-    <Button
         android:id="@+id/allrecipesbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
