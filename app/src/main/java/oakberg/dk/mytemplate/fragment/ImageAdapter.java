@@ -37,6 +37,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
         Picasso.with(mContext)
                 .load(uploadCurrent.getImageUrl())
+                .placeholder(R.mipmap.ic_launcher)
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
@@ -57,7 +58,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             super(itemView);
 
             textViewName = itemView.findViewById(R.id.text_view_name);
-            itemView = itemView.findViewById(R.id.image_view_upload);
+            imageView = itemView.findViewById(R.id.image_view_upload);
         }
     }
 }
