@@ -1,13 +1,10 @@
 package oakberg.dk.mytemplate.fragment;
 
-import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -33,12 +30,9 @@ import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.UUID;
-
 import oakberg.dk.mytemplate.R;
+import oakberg.dk.mytemplate.activities.ImagesActivity;
+import oakberg.dk.mytemplate.entity.Upload;
 
 import static android.app.Activity.RESULT_OK;
 

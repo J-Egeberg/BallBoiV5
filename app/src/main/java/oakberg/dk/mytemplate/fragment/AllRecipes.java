@@ -1,6 +1,5 @@
 package oakberg.dk.mytemplate.fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,15 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 import oakberg.dk.mytemplate.R;
-import oakberg.dk.mytemplate.entity.Recipe;
-import oakberg.dk.mytemplate.entity.RecipeAdapter;
-import oakberg.dk.mytemplate.entity.RecipeDetail;
+import oakberg.dk.mytemplate.jsonloader.Recipe;
+import oakberg.dk.mytemplate.adapters.RecipeAdapter;
+import oakberg.dk.mytemplate.activities.MyRecipeDetail;
 
 
 /**
@@ -52,7 +50,7 @@ public class AllRecipes extends Fragment {
                 Recipe selectedRecipe = recipeList.get(position);
 
                 // Intent created to navigate
-                Intent detailIntent = new Intent(getActivity(), RecipeDetail.class);
+                Intent detailIntent = new Intent(getActivity(), MyRecipeDetail.class);
 
                 // DetailActivity needs to know the title and url to display passing data via the intent
                 detailIntent.putExtra("title", selectedRecipe.title);
