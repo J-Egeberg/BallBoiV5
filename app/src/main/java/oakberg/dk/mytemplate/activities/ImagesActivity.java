@@ -1,11 +1,9 @@
-package oakberg.dk.mytemplate.fragment;
+package oakberg.dk.mytemplate.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import oakberg.dk.mytemplate.R;
+import oakberg.dk.mytemplate.adapters.ImageAdapter;
+import oakberg.dk.mytemplate.entity.Upload;
 
 public class ImagesActivity extends AppCompatActivity {
 

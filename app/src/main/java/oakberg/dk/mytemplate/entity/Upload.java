@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.fragment;
+package oakberg.dk.mytemplate.entity;
 
 public class Upload {
 

@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.fragment;
+package oakberg.dk.mytemplate.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import oakberg.dk.mytemplate.R;
+import oakberg.dk.mytemplate.entity.Upload;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
 

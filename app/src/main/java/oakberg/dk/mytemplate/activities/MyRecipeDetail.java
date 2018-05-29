@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.entity;
+package oakberg.dk.mytemplate.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.webkit.WebView;
 
 import oakberg.dk.mytemplate.R;
 
-public class RecipeDetail extends AppCompatActivity {
+public class MyRecipeDetail extends AppCompatActivity {
 
     private WebView mWebView;
 

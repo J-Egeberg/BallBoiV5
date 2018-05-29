@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.activities;
+package oakberg.dk.mytemplate.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

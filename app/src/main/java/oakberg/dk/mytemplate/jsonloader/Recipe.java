@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.entity;
+package oakberg.dk.mytemplate.jsonloader;
 
 import android.content.Context;
 

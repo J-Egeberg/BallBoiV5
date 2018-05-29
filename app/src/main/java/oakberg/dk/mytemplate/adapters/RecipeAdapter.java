@@ -1,4 +1,4 @@
-package oakberg.dk.mytemplate.entity;
+package oakberg.dk.mytemplate.adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import oakberg.dk.mytemplate.R;
+import oakberg.dk.mytemplate.jsonloader.Recipe;
 
 
 public class RecipeAdapter extends BaseAdapter {
