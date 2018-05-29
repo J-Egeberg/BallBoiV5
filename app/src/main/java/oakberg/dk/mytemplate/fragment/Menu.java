@@ -39,14 +39,14 @@ public class Menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getActivity(), "Going to All Recipes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to Our Recipes", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(3);
             }
         });
         addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Going to Add Food", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Going to User Recipes", Toast.LENGTH_SHORT).show();
                 ((MainActivity)getActivity()).setViewPager(4);
             }
         });

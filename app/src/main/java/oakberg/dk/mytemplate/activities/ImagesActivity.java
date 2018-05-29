@@ -31,7 +31,7 @@ public class ImagesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myrecipes_fragment_layout);
+        setContentView(R.layout.userrecipes_fragment_layout);
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);

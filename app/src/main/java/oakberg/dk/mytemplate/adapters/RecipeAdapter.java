@@ -51,7 +51,7 @@ public class RecipeAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get view for row item
-        View rowView = mInflater.inflate(R.layout.list_item_recipe, parent, false);
+        View rowView = mInflater.inflate(R.layout.allrecipes_activity_layout, parent, false);
 
 
         TextView titleTextView =
